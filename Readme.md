@@ -94,5 +94,5 @@ interface API
 
 ## A venir :
 
- * Options d'affichage
+ * Options d'affichage de la carte
  * Granularité de recherche
