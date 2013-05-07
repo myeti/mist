@@ -152,10 +152,7 @@ class MapQuest implements API
      */
     protected static function get($url)
     {
-        $ch = @curl_init();
-
-        if (!$ch)
-            throw new \Exception('Plop');
+        $ch = curl_init();
 
         @curl_setopt($ch, CURLOPT_URL, $url);
         @curl_setopt($ch, CURLOPT_POST, false);
@@ -167,12 +164,10 @@ class MapQuest implements API
         @curl_setopt($ch, CURLOPT_VERBOSE, true);
 
         $result = @curl_exec($ch);
-        if (!$result)
-            throw new \Exception('Pouet : ' . curl_error($ch));
 
         @curl_close($ch);
 
-        return (isset($result) ? $result : false);
+        return $result ?: false;
     }
 
 
