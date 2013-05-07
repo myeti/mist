@@ -147,7 +147,6 @@ class MapQuest implements API
      * Execute async request
      * @author Pampa22
      * @param $url
-     * @throws \Exception
      * @return mixed
      */
     protected static function get($url)
