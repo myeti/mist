@@ -107,7 +107,7 @@ class MapQuest implements API
      */
     public function display($search = null)
     {
-        // default location
+        // default location : Annecy, FR
         $location = new Location();
         $location->lat = '45.899267';
         $location->lng = '6.130672';

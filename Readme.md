@@ -50,7 +50,7 @@ $route = $map->path('Paris,FR', 'Annecy,FR'); // encore instable
 ### Afficher la carte
 
 ```php
-echo $map;
+echo $map; // affichera par défaut : Annecy, FR
 ```
 
 ### Afficher la carte sur un endroit précis
