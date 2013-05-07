@@ -63,7 +63,7 @@ echo $map('Paris,FR');
 ## Extension
 
 Si vous osuhaitez créer votre propre API (pour OpenStreetMap par exemple), elle doit obligatoirement implémenter l'interface **mist\API**
-et propose les fonctions suivantes :
+et proposer les fonctions suivantes :
 
 ```php
 interface API
