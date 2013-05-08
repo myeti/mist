@@ -19,20 +19,20 @@ namespace mist;
  * Class Map
  * @package mist
  */
-class Map implements API
+class Map
 {
 
     /** @var \mist\API */
-    public $_service;
+    public $_api;
 
 
     /**
-     * Build with Service
-     * @param API $service
+     * Build with API
+     * @param API $api
      */
-    public function __construct(API $service)
+    public function __construct(API $api)
     {
-        $this->_service = $service;
+        $this->_api = $api;
     }
 
 
@@ -43,7 +43,7 @@ class Map implements API
      */
     public function find($search)
     {
-        return $this->_service->find($search);
+        return $this->_api->find($search);
     }
 
 
@@ -55,18 +55,7 @@ class Map implements API
      */
     public function path($from, $to)
     {
-        return $this->_service->path($from, $to);
-    }
-
-
-    /**
-     * Display map
-     * @param null $location
-     * @return mixed
-     */
-    public function display($location = null)
-    {
-        return $this->_service->display($location);
+        return $this->_api->path($from, $to);
     }
 
 
@@ -76,7 +65,7 @@ class Map implements API
      */
     public function __toString()
     {
-        return $this->display();
+        return $this->_api->display();
     }
 
 
@@ -87,7 +76,7 @@ class Map implements API
      */
     public function __invoke($location)
     {
-        return $this->display($location);
+        return $this->_api->display($location);
     }
 
 }
