@@ -23,7 +23,7 @@ class Map
 {
 
     /** @var \mist\API */
-    public $_api;
+    protected $_api;
 
 
     /**
