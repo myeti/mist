@@ -49,4 +49,16 @@ class Location
     /** @var mixed */
     public $other;
 
+
+    /**
+     * Init with data
+     * @param array $data
+     */
+    public function __construct(array $data = [])
+    {
+        foreach($data as $field => $value)
+            if(property_exists($this, $field))
+                $this->{$field} = $value;
+    }
+
 }
